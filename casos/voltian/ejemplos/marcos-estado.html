@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcos por estado · Voltian</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0 auto; max-width: 40rem; padding: 1.5rem; font: 1rem/1.55 system-ui, sans-serif; color: #181b31; }
+    a { color: #31276e; }
+    a:focus-visible { outline: 3px solid #765ad6; outline-offset: 4px; }
+    .state-card {
+      --frame: #6251a3;
+      --fill: #f1eefb;
+      border: 1px solid var(--frame);
+      background: var(--fill);
+      border-radius: .75rem;
+      padding: 1rem;
+      margin-block: 1rem;
+    }
+    .state-card[data-status="pending"] { --frame: #92415c; --fill: #faedf1; }
+    .state-card[data-status="complete"] { --frame: #397c63; --fill: #edf8f2; }
+    .state-card h2 { font-size: 1.1rem; margin: 0; }
+    .state-card p { margin: .25rem 0 0; }
+  </style>
+</head>
+<body>
+  <a href="../../../index.html#codigo">Volver al caso</a>
+  <main>
+    <h1>Marcos por estado</h1>
+    <p>El texto nombra el estado y el color ayuda a localizarlo. Dos variables mantienen a juego el borde y el fondo.</p>
+    <article class="state-card" data-status="pending">
+      <h2>Por cerrar</h2>
+      <p>Revisa el parte antes de cerrar el trabajo.</p>
+    </article>
+    <article class="state-card" data-status="complete">
+      <h2>Cerrado</h2>
+      <p>El parte y el albarán siguen disponibles.</p>
+    </article>
+    <p><a href="https://github.com/eduardoarjonam/portfolio/blob/main/casos/voltian/ejemplos/marcos-estado.html">Leer el HTML y CSS en GitHub</a></p>
+  </main>
+</body>
+</html>

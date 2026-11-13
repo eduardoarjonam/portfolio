@@ -1,0 +1,46 @@
+/* El contenedor permite adaptar el listado al ancho que deja un panel lateral. */
+.work-list {
+  container: work-list / inline-size;
+}
+
+.work-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.work-toolbar input[type="search"] {
+  flex: 1 1 14rem;
+  min-inline-size: 0;
+}
+
+.work-toolbar :is(input, button), .work-row a {
+  min-block-size: 44px;
+}
+
+.work-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(7rem, auto) auto;
+  align-items: center;
+  gap: .75rem;
+}
+
+.work-row__title {
+  overflow-wrap: anywhere;
+}
+
+.work-row a {
+  display: inline-flex;
+  align-items: center;
+}
+
+@container work-list (width <= 32rem) {
+  .work-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .work-row a {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}

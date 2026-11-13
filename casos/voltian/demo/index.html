@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demo interactiva del recorrido de trabajos de Voltian con datos ficticios.">
+  <title>Trabajos · Demo de Voltian</title>
+  <link rel="stylesheet" href="demo.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="topbar">
+    <div class="container topbar-content">
+      <a class="brand" href="../../../index.html" aria-label="Volver al portfolio">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span>Voltian</span>
+      </a>
+      <span class="demo-label">Demo · Datos ficticios</span>
+    </div>
+  </header>
+
+  <main class="container main" id="contenido">
+    <div class="intro">
+      <div>
+        <a class="back-link" href="../../../index.html">← Portfolio</a>
+        <h1>Trabajos</h1>
+        <p>Consulta las intervenciones y cierra un trabajo de ejemplo.</p>
+      </div>
+      <button class="button secondary reset" id="reset" type="button">Reiniciar demo</button>
+    </div>
+
+    <p class="sr-only" role="status" id="announcement" aria-live="polite"></p>
+
+    <div class="workspace" id="workspace">
+      <section class="list-area" aria-label="Listado de trabajos">
+        <div class="tools">
+          <label class="search" for="search">
+            <span class="search-mark" aria-hidden="true"></span>
+            <span class="sr-only">Buscar trabajo o centro</span>
+            <input id="search" name="search" type="search" autocomplete="off" placeholder="Buscar trabajo o centro">
+          </label>
+          <div class="filters" role="group" aria-label="Filtrar por estado">
+            <button type="button" class="filter" data-filter="all" aria-pressed="true">Todos <span></span></button>
+            <button type="button" class="filter" data-filter="review" aria-pressed="false">Por cerrar <span></span></button>
+            <button type="button" class="filter" data-filter="progress" aria-pressed="false">En curso <span></span></button>
+            <button type="button" class="filter" data-filter="closed" aria-pressed="false">Cerrados <span></span></button>
+          </div>
+        </div>
+        <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+        <ul class="work-list" id="work-list"></ul>
+        <section class="empty" id="empty" hidden>
+          <h2>Sin resultados</h2>
+          <p>Prueba con otro término o vuelve a mostrar todos los trabajos.</p>
+          <button type="button" class="button secondary" id="clear">Quitar filtros</button>
+        </section>
+      </section>
+
+      <section class="detail" id="detail" aria-labelledby="detail-title">
+        <button class="back-link mobile-back" id="back" type="button">← Todos los trabajos</button>
+        <div class="detail-body">
+          <div class="detail-heading">
+            <span class="reference" id="detail-id"></span>
+            <span class="badge" id="detail-state"></span>
+            <h2 id="detail-title" tabindex="-1"></h2>
+            <p id="detail-site"></p>
+          </div>
+          <dl class="metadata">
+            <div><dt>Responsable</dt><dd id="detail-assignment"></dd></div>
+            <div><dt>Intervención</dt><dd id="detail-date"></dd></div>
+          </dl>
+          <section id="focus-card" class="focus-card" aria-labelledby="action-title">
+            <div class="focus-icon" id="focus-icon" aria-hidden="true"></div>
+            <div>
+              <h3 id="action-title"></h3>
+              <p id="action-copy"></p>
+              <button type="button" class="button primary" id="close-work">Cerrar trabajo</button>
+            </div>
+          </section>
+          <details class="report" id="report">
+            <summary>
+              <span><strong>Parte de la intervención</strong><small id="report-status"></small></span>
+              <span class="report-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="report-body">
+              <p id="report-text"></p>
+              <p class="report-signature" id="report-signature"></p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+    <noscript><p>Activa JavaScript para usar los filtros y probar el cierre de un trabajo.</p></noscript>
+  </main>
+
+  <dialog id="confirm" aria-labelledby="confirm-title" aria-describedby="confirm-copy">
+    <form method="dialog" class="confirm-form">
+      <h2 id="confirm-title">Cerrar trabajo</h2>
+      <p id="confirm-copy">Confirma que revisaste el parte. El trabajo pasará a Cerrado en esta demo.</p>
+      <div class="confirm-actions">
+        <button class="button secondary" value="cancel" autofocus>Volver al parte</button>
+        <button class="button primary" value="close">Confirmar cierre</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

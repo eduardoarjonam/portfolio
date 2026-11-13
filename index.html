@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Caso de producto de Eduardo Arjona. Rediseño de Trabajos en Voltian OS, con comparativas y demo interactiva.">
+  <title>Voltian OS · Eduardo Arjona</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="wrap navigation">
+      <a class="signature" href="./">Eduardo Arjona</a>
+      <nav aria-label="Portfolio">
+        <a href="#comparativa">Comparativa</a>
+        <a href="#codigo">Código</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="wrap hero-content">
+        <div>
+          <p class="project">Voltian OS <span>· Diseño de producto</span></p>
+          <h1 id="titulo">Del parte al cierre, con lo importante a la vista.</h1>
+          <p class="intro">Rediseñé el flujo de Trabajos de Voltian OS para que instaladoras y equipos de mantenimiento puedan identificar el estado y seguir con la intervención desde el móvil o el PC.</p>
+          <div class="actions">
+            <a class="button" href="casos/voltian/demo/index.html">Probar la demo <span aria-hidden="true">↗</span></a>
+            <a class="text-action" href="#comparativa">Ver antes y después</a>
+          </div>
+        </div>
+        <div class="sample" aria-label="Ejemplo de un trabajo por cerrar con datos ficticios">
+          <header><strong>Trabajos</strong><small>Parte de intervención</small></header>
+          <div class="sample-content">
+            <div class="sample-card">
+              <p class="sample-state"><span></span> Por cerrar</p>
+              <h2>Revisión de climatización</h2>
+              <p>Centro Noria · Visita registrada</p>
+            </div>
+            <div class="sample-card success">
+              <p class="sample-state"><span></span> Parte recibido</p>
+              <p>Albarán y conformidad disponibles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="comparativa" aria-labelledby="titulo-comparativa">
+      <h2 class="section-title" id="titulo-comparativa">Antes y después</h2>
+      <p class="section-intro">La misma intervención en dos versiones de la app, con datos ficticios. En la versión publicada, el marco reúne el parte y sus acciones. En móvil, albarán y firma quedan a mano.</p>
+      <div class="comparison">
+        <input class="visually-hidden" type="radio" name="pantalla" id="view-pc" checked>
+        <input class="visually-hidden" type="radio" name="pantalla" id="view-movil">
+        <div class="switch" role="group" aria-label="Dispositivo de la comparación">
+          <label for="view-pc">PC</label><label for="view-movil">Móvil</label>
+        </div>
+        <figure class="preview desktop">
+          <a href="casos/voltian/imagenes/antes-despues-pc.webp" aria-label="Abrir comparación de PC a tamaño completo">
+            <img src="casos/voltian/imagenes/antes-despues-pc.webp" width="2960" height="914" alt="Intervención en PC. Antes, parte sin marco. Después, el parte y las acciones de albarán y firma se agrupan dentro de un marco burdeos." loading="lazy">
+          </a>
+          <figcaption>Intervención en PC · Pulsa para ampliar.</figcaption>
+        </figure>
+        <figure class="preview mobile">
+          <a href="casos/voltian/imagenes/antes-despues-movil.webp" aria-label="Abrir comparación de móvil a tamaño completo">
+            <img src="casos/voltian/imagenes/antes-despues-movil.webp" width="822" height="912" alt="Intervención en móvil. Antes, el botón de albarán ocupa gran parte de la pantalla. Después, los botones de albarán y firma son compactos y se ven juntos." loading="lazy">
+          </a>
+          <figcaption>Intervención en móvil · Pulsa para ampliar.</figcaption>
+        </figure>
+      </div>
+
+      <div class="decisions">
+        <div><h3>Estados que se leen de un vistazo</h3><p>El marco, el fondo y la etiqueta textual comparten el tono del estado.</p></div>
+        <div><h3>Acciones cerca del parte</h3><p>El informe, la firma y el cierre se sitúan donde se toma la decisión.</p></div>
+        <div><h3>Controles con espacio propio</h3><p>Buscador, filtros y resultados se distinguen incluso en pantallas estrechas.</p></div>
+      </div>
+    </section>
+
+    <section class="code-band" id="codigo" aria-labelledby="titulo-codigo">
+      <div class="wrap section code-content">
+        <div>
+          <h2 class="section-title" id="titulo-codigo">Ejemplos de código</h2>
+          <p class="section-intro">Los ejemplos reproducen dos decisiones del caso. La demo lleva esas mismas ideas a un flujo que puedes recorrer sin cuenta.</p>
+        </div>
+        <ul class="code-links">
+          <li><a href="casos/voltian/ejemplos/marcos-estado.html"><strong>Marcos y estados</strong><span>Ver el componente HTML y CSS ↗</span></a></li>
+          <li><a href="casos/voltian/ejemplos/listado-adaptable.css"><strong>Listado adaptable</strong><span>Leer el ejemplo CSS ↗</span></a></li>
+          <li><a href="casos/voltian/demo/index.html"><strong>Flujo de Trabajos</strong><span>Probar la demo interactiva ↗</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer">
+    <span>Eduardo Arjona</span><a href="https://github.com/eduardoarjonam/portfolio">Ver repositorio en GitHub ↗</a>
+  </footer>
+  <script>
+    if (window.matchMedia('(max-width: 700px)').matches) {
+      document.getElementById('view-movil').checked = true
+    }
+  </script>
+</body>
+</html>
