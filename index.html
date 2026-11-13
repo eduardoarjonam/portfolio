@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Voltian OS, la herramienta que Eduardo Arjona creó desde cero para organizar el trabajo de instaladoras y empresas de mantenimiento.">
+  <meta name="description" content="Creé Voltian OS para que instaladoras y empresas de mantenimiento puedan llevar cada trabajo del presupuesto al cierre. Conoce la herramienta y prueba la demo.">
   <title>Voltian OS · Portfolio de Eduardo Arjona</title>
   <link rel="stylesheet" href="portfolio.css">
 </head>
@@ -11,124 +11,129 @@
   <a class="skip" href="#contenido">Saltar al contenido</a>
   <header class="site-header">
     <div class="wrap navigation">
-      <a class="signature" href="./">Eduardo Arjona</a>
+      <a class="signature" href="https://eduardoarjona.com/" aria-label="Web de Eduardo Arjona">Edu Arjona<span aria-hidden="true">.</span></a>
       <nav aria-label="Portfolio">
-        <a href="#producto">Producto</a>
-        <a href="#evolucion">Evolución</a>
+        <a href="#recorrido">Cómo funciona</a>
         <a href="#codigo">Código</a>
+        <a href="casos/voltian/demo/index.html">Demo <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
+
   <main id="contenido">
-    <section class="hero" aria-labelledby="titulo">
-      <div class="wrap hero-content">
-        <div>
-          <p class="project">Producto propio · Creado desde cero</p>
-          <h1 id="titulo">Voltian OS</h1>
-          <p class="hero-tagline">El día a día de una instaladora, en una sola herramienta.</p>
-          <p class="intro">Creé Voltian OS para que autónomos y empresas de instalación y mantenimiento puedan coordinar clientes, presupuestos, visitas y trabajos desde el mismo sitio, en oficina y en campo.</p>
-          <div class="actions">
-            <a class="button" href="casos/voltian/demo/index.html">Probar la demo <span aria-hidden="true">↗</span></a>
-            <a class="text-action" href="#producto">Explorar funcionalidades</a>
-          </div>
-          <ul class="project-details" aria-label="Mi trabajo en Voltian OS">
-            <li>Definición del producto</li><li>Diseño de interfaz</li><li>Desarrollo y puesta en marcha</li>
-          </ul>
+    <section class="wrap hero" aria-labelledby="titulo">
+      <div class="hero-copy">
+        <p class="label">Portfolio · Voltian OS</p>
+        <h1 id="titulo">Cada trabajo, con sus cosas en su sitio.</h1>
+        <p class="intro">Creé Voltian OS desde cero para instaladoras y empresas de mantenimiento. Quería que quien prepara el presupuesto, quien organiza las visitas y quien hace el trabajo tuviesen el mismo contexto.</p>
+        <div class="actions">
+          <a class="button" href="casos/voltian/demo/index.html">Probar la demo <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#recorrido">Ver cómo funciona <span aria-hidden="true">↓</span></a>
         </div>
-        <figure class="product-shot">
-          <a href="casos/voltian/imagenes/inicio-pc.webp" aria-label="Ampliar la pantalla Hoy en PC"><img src="casos/voltian/imagenes/inicio-pc.webp" width="1440" height="1000" alt="Pantalla Hoy de Voltian OS con el resumen de la jornada y accesos a clientes, trabajos, agenda y presupuestos." fetchpriority="high"></a>
-          <figcaption>Hoy, el centro operativo · PC · Datos ficticios</figcaption>
-        </figure>
       </div>
+      <figure class="screen hero-screen">
+        <a href="casos/voltian/imagenes/inicio-pc.webp" aria-label="Ampliar la pantalla Hoy en PC">
+          <img src="casos/voltian/imagenes/inicio-pc.webp" width="1440" height="1000" alt="Pantalla Hoy de Voltian OS con oportunidades, presupuestos, trabajos abiertos y avisos." fetchpriority="high">
+        </a>
+        <figcaption><span>Hoy · Voltian OS en PC</span><span>Datos ficticios</span></figcaption>
+      </figure>
     </section>
 
-    <section class="wrap section" id="producto" aria-labelledby="titulo-producto">
-      <h2 class="section-title" id="titulo-producto">Qué puedes hacer con Voltian</h2>
-      <p class="section-intro">La ficha del cliente da contexto a las oportunidades y los presupuestos. Cuando llega el momento de ejecutar, el equipo planifica las visitas, registra el trabajo realizado y conserva el parte.</p>
-      <div class="modules">
-        <article><h3>Clientes y oportunidades</h3><p>Consultar clientes, ubicaciones e historial. Seguir las oportunidades desde la información comercial hasta el trabajo.</p></article>
-        <article><h3>Presupuestos y facturación</h3><p>Preparar presupuestos por partidas, consultar documentos de compra y venta y compartir documentación con gestoría según los permisos.</p></article>
-        <article><h3>Agenda y equipo</h3><p>Programar visitas, asignarlas al equipo y consultar el calendario. Desde Mi día, el personal de campo consulta su jornada y accede a sus intervenciones.</p></article>
-        <article><h3>Trabajos e intervenciones</h3><p>Registrar lo realizado, añadir fotos y materiales, recoger la conformidad y revisar el parte antes del cierre.</p></article>
-        <article><h3>Planos, activos y mantenimiento</h3><p>Situar equipos sobre planos y mapas, consultar sus fichas y organizar revisiones periódicas.</p></article>
-        <article><h3>Partes y avisos</h3><p>Reunir los partes de campo y ver desde oficina qué está pendiente de revisión.</p></article>
-      </div>
-      <div class="product-gallery">
-        <figure class="product-shot phone">
-          <a href="casos/voltian/imagenes/inicio-movil.webp" aria-label="Ampliar Hoy en móvil"><img src="casos/voltian/imagenes/inicio-movil.webp" width="390" height="844" alt="Pantalla Hoy de Voltian OS en móvil." loading="lazy"></a>
-          <figcaption>Hoy · Móvil</figcaption>
-        </figure>
-        <div class="product-screens">
-          <figure class="product-shot">
-            <a href="casos/voltian/imagenes/agenda-pc.webp" aria-label="Ampliar Agenda en PC"><img src="casos/voltian/imagenes/agenda-pc.webp" width="1440" height="1000" alt="Agenda de Voltian OS con visitas programadas." loading="lazy"></a>
-            <figcaption>Agenda · PC</figcaption>
-          </figure>
-          <figure class="product-shot">
-            <a href="casos/voltian/imagenes/presupuestos-pc.webp" aria-label="Ampliar Presupuestos en PC"><img src="casos/voltian/imagenes/presupuestos-pc.webp" width="1440" height="1000" alt="Listado de presupuestos de Voltian OS." loading="lazy"></a>
-            <figcaption>Presupuestos · PC</figcaption>
-          </figure>
+    <section class="paper-band" id="recorrido" aria-labelledby="titulo-recorrido">
+      <div class="wrap section">
+        <div class="section-head">
+          <p class="label">Cómo funciona</p>
+          <h2 id="titulo-recorrido">Del presupuesto al cierre.</h2>
+          <p>Piensa en una revisión de climatización. El cliente pide precio, alguien tiene que cuadrar la visita y después hay que saber qué se hizo. Así se sigue ese trabajo en Voltian.</p>
         </div>
+        <div class="scenes">
+          <article class="scene">
+            <div class="scene-copy">
+              <h3>Preparas el presupuesto.</h3>
+              <p>Abres la ficha del cliente, preparas las partidas y ves qué propuestas esperan respuesta. Cuando se acepta una, puedes llevar lo acordado al trabajo.</p>
+            </div>
+            <figure class="screen">
+              <a href="casos/voltian/imagenes/presupuestos-pc.webp" aria-label="Ampliar la pantalla de Presupuestos">
+                <img src="casos/voltian/imagenes/presupuestos-pc.webp" width="1440" height="1000" alt="Vista de presupuestos en PC con importes y estados de borrador, enviado y aceptado." loading="lazy">
+              </a>
+              <figcaption>Presupuestos · PC</figcaption>
+            </figure>
+          </article>
+          <article class="scene">
+            <div class="scene-copy">
+              <h3>Cuadras la visita.</h3>
+              <p>En la agenda ves a quién puedes asignarla y si coincide con otro trabajo. El equipo de campo consulta desde el móvil dónde tiene que ir y qué va a hacer.</p>
+            </div>
+            <figure class="screen">
+              <a href="casos/voltian/imagenes/agenda-pc.webp" aria-label="Ampliar la pantalla de Agenda">
+                <img src="casos/voltian/imagenes/agenda-pc.webp" width="1440" height="1000" alt="Agenda semanal en PC con visitas asignadas y aviso de dos visitas que se solapan." loading="lazy">
+              </a>
+              <figcaption>Agenda del equipo · PC</figcaption>
+            </figure>
+          </article>
+          <article class="scene mobile-scene">
+            <div class="scene-copy">
+              <h3>Dejas constancia de lo hecho.</h3>
+              <p>Desde el móvil puedes registrar lo realizado, adjuntar fotos y materiales y recoger la conformidad del cliente. En oficina se revisa el parte y se decide si queda algo por hacer.</p>
+              <a class="text-link" href="casos/voltian/demo/index.html#trabajos">Ver Trabajos en la demo <span aria-hidden="true">↗</span></a>
+            </div>
+            <figure class="screen phone">
+              <a href="casos/voltian/imagenes/mi-dia-movil.webp" aria-label="Ampliar la intervención en Mi día">
+                <img src="casos/voltian/imagenes/mi-dia-movil.webp" width="390" height="844" alt="Intervención en Mi día con el horario, la ubicación, el acceso a planos y las comprobaciones pendientes." loading="lazy">
+              </a>
+              <figcaption>Mi día · Móvil</figcaption>
+            </figure>
+          </article>
+        </div>
+        <p class="caption">Capturas de la aplicación con datos ficticios. Algunas funciones dependen del plan y de la configuración.</p>
       </div>
-      <p class="caption">Capturas de Voltian OS con datos ficticios. Algunas funciones dependen del plan y la configuración.</p>
     </section>
 
     <section class="demo-band" aria-labelledby="titulo-demo">
       <div class="wrap demo-content">
         <div>
-          <h2 id="titulo-demo">Explora la herramienta</h2>
-          <p>En la demo puedes recorrer Inicio, Trabajos, Clientes y Presupuestos. Prueba a buscar un cliente, consultar un presupuesto o abrir un parte y simular su cierre.</p>
+          <p class="label">Demo interactiva</p>
+          <h2 id="titulo-demo">Pruébalo con una empresa de ejemplo.</h2>
+          <p>Puedes buscar un cliente, abrir su presupuesto y seguir el trabajo hasta el parte y el cierre simulado.</p>
         </div>
-        <a class="button" href="casos/voltian/demo/index.html">Abrir demo con datos ficticios <span aria-hidden="true">↗</span></a>
+        <a class="button" href="casos/voltian/demo/index.html">Abrir la demo <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
-    <section class="wrap section" id="evolucion" aria-labelledby="titulo-evolucion">
-      <h2 class="section-title" id="titulo-evolucion">Cómo evolucionó el parte de trabajo</h2>
-      <p class="section-intro">En esta revisión, el marco y el fondo pasaron a identificar el estado del parte. En móvil, albarán y firma quedaron juntos y visibles. Las imágenes muestran la misma intervención en las dos versiones.</p>
-      <div class="comparison">
-        <input class="visually-hidden" type="radio" name="pantalla" id="view-pc" checked>
-        <input class="visually-hidden" type="radio" name="pantalla" id="view-movil">
-        <div class="switch" role="group" aria-label="Dispositivo de la comparación">
-          <label for="view-pc">PC</label><label for="view-movil">Móvil</label>
-        </div>
-        <figure class="preview desktop">
-          <a href="casos/voltian/imagenes/antes-despues-pc.webp" aria-label="Abrir comparación de PC a tamaño completo">
-            <img src="casos/voltian/imagenes/antes-despues-pc.webp" width="2960" height="914" alt="Intervención en PC. Antes, parte sin marco. Después, el parte y las acciones de albarán y firma se agrupan dentro de un marco burdeos." loading="lazy">
-          </a>
-          <figcaption>Intervención en PC · Pulsa para ampliar.</figcaption>
-        </figure>
-        <figure class="preview mobile">
-          <a href="casos/voltian/imagenes/antes-despues-movil.webp" aria-label="Abrir comparación de móvil a tamaño completo">
-            <img src="casos/voltian/imagenes/antes-despues-movil.webp" width="822" height="912" alt="Intervención en móvil. Antes, el botón de albarán ocupa gran parte de la pantalla. Después, los botones de albarán y firma son compactos y se ven juntos." loading="lazy">
-          </a>
-          <figcaption>Intervención en móvil · Pulsa para ampliar.</figcaption>
-        </figure>
+    <section class="wrap section detail-grid" aria-labelledby="titulo-alcance">
+      <div>
+        <p class="label">Además de las visitas</p>
+        <h2 id="titulo-alcance">Lo que queda de cada trabajo.</h2>
       </div>
-
+      <dl class="feature-list">
+        <div><dt>Clientes y oportunidades</dt><dd>La ficha reúne ubicaciones, actividad y seguimiento comercial.</dd></div>
+        <div><dt>Planos, equipos y mantenimiento</dt><dd>Puedes situar equipos sobre un plano y volver a su historial al preparar una revisión.</dd></div>
+        <div><dt>Compras, ventas y gestoría</dt><dd>Los documentos se organizan en la aplicación y se pueden compartir con gestoría según los permisos.</dd></div>
+      </dl>
     </section>
 
-    <section class="code-band" id="codigo" aria-labelledby="titulo-codigo">
-      <div class="wrap section code-content">
+    <section class="paper-band" id="codigo" aria-labelledby="titulo-codigo">
+      <div class="wrap section detail-grid">
         <div>
-          <h2 class="section-title" id="titulo-codigo">Ejemplos de código</h2>
-          <p class="section-intro">Construí la app con React y TypeScript, una API en Fastify y PostgreSQL. Los ejemplos reproducen partes concretas de la interfaz y de la planificación en un entorno independiente.</p>
+          <p class="label">Por dentro</p>
+          <h2 id="titulo-codigo">Ejemplos de código.</h2>
+          <p class="section-copy">Construí Voltian con React y TypeScript, una API en Fastify y PostgreSQL. Para el portfolio preparé ejemplos independientes que puedes leer o probar.</p>
         </div>
         <ul class="code-links">
-          <li><a href="casos/voltian/ejemplos/marcos-estado.html"><strong>Marcos y estados</strong><span>Ver el componente HTML y CSS ↗</span></a></li>
-          <li><a href="casos/voltian/ejemplos/listado-adaptable.css"><strong>Listado adaptable</strong><span>Leer el ejemplo CSS ↗</span></a></li>
-          <li><a href="https://github.com/eduardoarjonam/portfolio/blob/main/casos/voltian/ejemplos/agenda.mjs"><strong>Solapes de agenda</strong><span>Leer el ejemplo JavaScript ↗</span></a></li>
-          <li><a href="https://github.com/eduardoarjonam/portfolio/tree/main/casos/voltian/demo"><strong>Demo de Voltian</strong><span>Ver el código en GitHub ↗</span></a></li>
+          <li><a href="https://github.com/eduardoarjonam/portfolio/blob/main/casos/voltian/ejemplos/agenda.mjs"><strong>Detectar dos visitas que coinciden</strong><span>JavaScript ↗</span></a></li>
+          <li><a href="https://github.com/eduardoarjonam/portfolio/blob/main/casos/voltian/ejemplos/listado-adaptable.css"><strong>Adaptar un listado al espacio disponible</strong><span>CSS ↗</span></a></li>
+          <li><a href="casos/voltian/ejemplos/marcos-estado.html"><strong>Hacer que un estado se lea de un vistazo</strong><span>HTML y CSS ↗</span></a></li>
         </ul>
       </div>
     </section>
   </main>
+
   <footer class="wrap footer">
-    <span>Eduardo Arjona · Creador de Voltian OS</span><a href="https://github.com/eduardoarjonam/portfolio">Ver repositorio en GitHub ↗</a>
+    <span>Eduardo Arjona · Creador de Voltian OS</span>
+    <nav aria-label="Enlaces del proyecto">
+      <a href="https://voltian.es/">Voltian ↗</a>
+      <a href="https://github.com/eduardoarjonam/portfolio">GitHub ↗</a>
+    </nav>
   </footer>
-  <script>
-    if (window.matchMedia('(max-width: 700px)').matches) {
-      document.getElementById('view-movil').checked = true
-    }
-  </script>
 </body>
 </html>
