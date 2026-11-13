@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Demo interactiva del recorrido de trabajos de Voltian con datos ficticios.">
-  <title>Trabajos · Demo de Voltian</title>
+  <meta name="description" content="Demo interactiva de Voltian OS. Consulta la agenda, revisa trabajos y explora clientes y presupuestos con datos ficticios.">
+  <title>Inicio · Demo de Voltian OS</title>
   <link rel="stylesheet" href="demo.css">
   <script src="demo.js" defer></script>
 </head>
@@ -14,25 +14,50 @@
     <div class="container topbar-content">
       <a class="brand" href="../../../index.html" aria-label="Volver al portfolio">
         <span class="brand-mark" aria-hidden="true">V</span>
-        <span>Voltian</span>
+        <span>Voltian OS</span>
       </a>
       <span class="demo-label">Demo · Datos ficticios</span>
     </div>
   </header>
 
-  <main class="container main" id="contenido">
+  <nav class="navigation" aria-label="Secciones de la demo">
+    <div class="container navigation-links">
+      <a href="#inicio" data-view="inicio" aria-current="page">Inicio</a>
+      <a href="#trabajos" data-view="trabajos">Trabajos</a>
+      <a href="#clientes" data-view="clientes">Clientes</a>
+      <a href="#presupuestos" data-view="presupuestos">Presupuestos</a>
+    </div>
+  </nav>
+
+  <main class="container main" id="contenido" tabindex="-1">
     <div class="intro">
       <div>
         <a class="back-link" href="../../../index.html">← Portfolio</a>
-        <h1>Trabajos</h1>
-        <p>Consulta las intervenciones y cierra un trabajo de ejemplo.</p>
+        <h1 id="view-title" tabindex="-1">Inicio</h1>
+        <p id="view-description">Revisa la agenda, los trabajos pendientes y los presupuestos en seguimiento.</p>
       </div>
-      <button class="button secondary reset" id="reset" type="button">Reiniciar demo</button>
+      <button class="button secondary reset" id="reset" type="button" hidden>Reiniciar demo</button>
     </div>
 
     <p class="sr-only" role="status" id="announcement" aria-live="polite"></p>
 
-    <div class="workspace" id="workspace">
+    <section id="view-inicio" aria-labelledby="view-title">
+      <div class="activity-stats" id="activity-stats"></div>
+      <div class="overview-grid">
+        <section class="surface" aria-labelledby="agenda-title">
+          <div class="surface-heading">
+            <div><h2 id="agenda-title">Agenda del equipo</h2><p>18 de noviembre · Intervenciones de ejemplo</p></div>
+          </div>
+          <ul class="timeline" id="agenda-list"></ul>
+        </section>
+        <section class="surface" aria-labelledby="pending-title">
+          <div class="surface-heading"><div><h2 id="pending-title">Partes por cerrar</h2><p>Trabajos con la intervención registrada.</p></div></div>
+          <ul class="overview-list" id="pending-list"></ul>
+        </section>
+      </div>
+    </section>
+
+    <div id="view-trabajos" hidden><div class="workspace" id="workspace">
       <section class="list-area" aria-label="Listado de trabajos">
         <div class="tools">
           <label class="search" for="search">
@@ -89,8 +114,26 @@
           </details>
         </div>
       </section>
-    </div>
-    <noscript><p>Activa JavaScript para usar los filtros y probar el cierre de un trabajo.</p></noscript>
+    </div></div>
+
+    <section id="view-clientes" aria-labelledby="view-title" hidden>
+      <label class="search section-search" for="customer-search">
+        <span class="search-mark" aria-hidden="true"></span>
+        <span class="sr-only">Buscar cliente o centro</span>
+        <input id="customer-search" type="search" autocomplete="off" placeholder="Buscar cliente o centro">
+      </label>
+      <p class="result-count" id="customer-count" role="status"></p>
+      <div class="overview-grid" id="customer-list"></div>
+    </section>
+
+    <section id="view-presupuestos" aria-labelledby="view-title" hidden>
+      <div class="filters" id="quote-filters" role="group" aria-label="Estado del presupuesto"></div>
+      <a id="all-quotes" class="record-link" href="#presupuestos" hidden>Ver presupuestos de todos los clientes</a>
+      <p class="result-count" id="quote-count" role="status"></p>
+      <div class="overview-grid" id="quote-list"></div>
+    </section>
+
+    <noscript><p>Activa JavaScript para recorrer la demo, abrir fichas y probar el cierre de un trabajo.</p></noscript>
   </main>
 
   <dialog id="confirm" aria-labelledby="confirm-title" aria-describedby="confirm-copy">

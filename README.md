@@ -1,29 +1,33 @@
 # Eduardo Arjona · Portfolio
 
-Casos de diseño e implementación de producto.
-
 ## Voltian OS
 
-Voltian OS ayuda a instaladoras y equipos de mantenimiento a organizar el trabajo. En este caso revisé el recorrido de Trabajos para dar más aire a los controles, distinguir los estados de un vistazo y acercar las acciones de albarán, firma y cierre en móvil.
+Creé Voltian OS desde cero para autónomos y empresas de instalación y mantenimiento. Trabajé en la definición del producto, el diseño de los recorridos, el desarrollo y la puesta en marcha.
 
-[Ver el caso](https://eduardoarjonam.github.io/portfolio/) · [Probar la demo de Voltian](https://eduardoarjonam.github.io/portfolio/casos/voltian/demo/)
+El producto reúne clientes y oportunidades, presupuestos, agenda, trabajos de campo, planos, activos y documentación para gestoría. Oficina y campo pueden consultar lo que pasó en cada ubicación y continuar el trabajo desde el móvil o el PC.
 
-### Antes y después
+[Explorar Voltian OS](https://eduardoarjonam.github.io/portfolio/) · [Probar la demo](https://eduardoarjonam.github.io/portfolio/casos/voltian/demo/)
 
-Las imágenes comparan la pantalla de intervención antes y después de la revisión. Se reprodujeron las dos versiones de la interfaz con datos ficticios. En móvil se aprecia el cambio de altura y posición de los botones. En PC se ve cómo el marco y el fondo agrupan el parte y sus acciones.
+![Inicio de Voltian OS en PC con datos ficticios](casos/voltian/imagenes/inicio-pc.webp)
 
-| PC | Móvil |
-| --- | --- |
-| [Abrir comparación en PC](casos/voltian/imagenes/antes-despues-pc.webp) | [Abrir comparación en móvil](casos/voltian/imagenes/antes-despues-movil.webp) |
+### Qué puedes ver
 
-![Antes y después del parte de intervención en móvil](casos/voltian/imagenes/antes-despues-movil.webp)
+- [Inicio en móvil](casos/voltian/imagenes/inicio-movil.webp) para consultar la actividad de la jornada.
+- [Agenda en PC](casos/voltian/imagenes/agenda-pc.webp) para programar visitas y coordinar el equipo.
+- [Presupuestos en PC](casos/voltian/imagenes/presupuestos-pc.webp) para consultar importes y estados.
+- [Demo interactiva](https://eduardoarjonam.github.io/portfolio/casos/voltian/demo/) con Inicio, Trabajos, Clientes y Presupuestos. Permite buscar trabajos, consultar un parte y simular el cierre con datos ficticios.
 
-### Demo y ejemplos de código
+### Una mejora del producto
 
-La demo permite filtrar trabajos, abrir una ficha, consultar el parte y simular el cierre. Funciona con datos en memoria y se puede reiniciar.
+Las comparativas muestran el mismo albarán antes y después de una revisión de diseño. En móvil, albarán y firma quedan a la vista juntos. En PC, el marco y el fondo agrupan el parte y sus acciones.
 
-- [Demo interactiva · código](casos/voltian/demo/)
-- [Marcos y fondos por estado · HTML y CSS](casos/voltian/ejemplos/marcos-estado.html)
-- [Diseño que responde al espacio disponible · CSS](casos/voltian/ejemplos/listado-adaptable.css)
+[Antes y después en PC](casos/voltian/imagenes/antes-despues-pc.webp) · [Antes y después en móvil](casos/voltian/imagenes/antes-despues-movil.webp)
 
-Para ver la demo en local, abre `casos/voltian/demo/index.html` en el navegador.
+### Ejemplos de código
+
+- [Marcos y fondos por estado](casos/voltian/ejemplos/marcos-estado.html) con HTML y variables CSS.
+- [Listado adaptable](casos/voltian/ejemplos/listado-adaptable.css) con consultas de contenedor.
+- [Solapes de agenda](casos/voltian/ejemplos/agenda.mjs) para identificar dos visitas simultáneas del mismo equipo.
+- [Código de la demo](casos/voltian/demo/) con búsqueda, filtros y cambios de estado en memoria.
+
+Para probar la demo en local, abre `casos/voltian/demo/index.html` en el navegador.
